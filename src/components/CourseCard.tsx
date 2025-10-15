@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
-import { Course, Colors } from '@/constants/Data';
-import { useCart } from '@/contexts/CartContext';
+import { Course, Colors } from '../constants/Data';
+import { useCart } from '../contexts/CartContext';
 
 interface CourseCardProps {
   course: Course;

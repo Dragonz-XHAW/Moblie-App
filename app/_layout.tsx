@@ -6,9 +6,9 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { CartProvider } from '@/contexts/CartContext';
-import { Colors } from '@/constants/Data';
+import { useColorScheme } from '../src/hooks/useColorScheme';
+import { CartProvider } from '../src/contexts/CartContext';
+import { Colors } from '../src/constants/Data';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

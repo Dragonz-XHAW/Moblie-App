@@ -9,8 +9,8 @@ import {
   Alert,
 } from 'react-native';
 import { router } from 'expo-router';
-import { Colors } from '@/constants/Data';
-import { useCart } from '@/contexts/CartContext';
+import { Colors } from '../constants/Data';
+import { useCart } from '../contexts/CartContext';
 
 export default function CartScreen() {
   const { state, removeFromCart, clearCart } = useCart();

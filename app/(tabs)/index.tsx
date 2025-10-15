@@ -11,9 +11,9 @@ import {
   Image,
 } from 'react-native';
 import { router } from 'expo-router';
-import { CourseCard } from '@/components/CourseCard';
-import { coursesData, Colors } from '@/constants/Data';
-import { useCart } from '@/contexts/CartContext';
+import { CourseCard } from '../../src/components/CourseCard';
+import { coursesData, Colors } from '../../src/constants/Data';
+import { useCart } from '../../src/contexts/CartContext';
 
 const { width } = Dimensions.get('window');
 
