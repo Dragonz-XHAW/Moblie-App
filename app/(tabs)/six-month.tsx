@@ -1,16 +1,16 @@
+import { router } from 'expo-router';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  TouchableOpacity,
   FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CourseCard } from '../../src/components/CourseCard';
-import { coursesData, Colors, Course } from '../../src/constants/Data';
+import { Colors, Course, coursesData } from '../../src/constants/Data';
 import { useCart } from '../../src/contexts/CartContext';
 
 export default function SixMonthScreen() {
@@ -22,7 +22,8 @@ export default function SixMonthScreen() {
     <View style={[styles.cardContainer, index % 2 === 1 && styles.cardRightMargin]}>
       <CourseCard
         course={item}
-        onPress={() => router.push(`/course-details/${item.id}`)}
+        onPress={() => {
+        }}
       />
     </View>
   );
