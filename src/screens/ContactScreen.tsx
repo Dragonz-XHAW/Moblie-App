@@ -10,7 +10,7 @@ import {
   Alert,
   Linking,
 } from 'react-native';
-import { Colors } from '../../src/constants/Data';
+import { Colors } from '../constants/Data';
 
 export default function ContactScreen() {
   const [formData, setFormData] = useState({

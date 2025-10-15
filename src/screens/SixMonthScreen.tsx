@@ -9,14 +9,14 @@ import {
   FlatList,
 } from 'react-native';
 import { router } from 'expo-router';
-import { CourseCard } from '../../src/components/CourseCard';
-import { coursesData, Colors, Course } from '../../src/constants/Data';
-import { useCart } from '../../src/contexts/CartContext';
+import { CourseCard } from '../components/CourseCard';
+import { coursesData, Colors, Course } from '../constants/Data';
+import { useCart } from '../contexts/CartContext';
 
-export default function SixWeekScreen() {
+export default function SixMonthScreen() {
   const { state } = useCart();
   
-  const sixWeekCourses = coursesData.filter(course => course.category === 'six-week');
+  const sixMonthCourses = coursesData.filter(course => course.category === 'six-month');
 
   const renderCourseCard = ({ item, index }: { item: Course; index: number }) => (
     <View style={[styles.cardContainer, index % 2 === 1 && styles.cardRightMargin]}>
@@ -32,7 +32,7 @@ export default function SixWeekScreen() {
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.logo}>6-Week Courses</Text>
+          <Text style={styles.logo}>6-Month Courses</Text>
           {state.items.length > 0 && (
             <TouchableOpacity 
               style={styles.cartButton}
@@ -48,34 +48,34 @@ export default function SixWeekScreen() {
 
         {/* Course Header */}
         <View style={styles.courseHeader}>
-          <Text style={styles.courseTitle}>Six-Week Intensive Courses</Text>
+          <Text style={styles.courseTitle}>Six-Month Professional Courses</Text>
           <Text style={styles.courseSubtitle}>
-            Fast-track your skills with focused, intensive training programs
+            Comprehensive training programs for in-depth skill development
           </Text>
           <View style={styles.priceTag}>
-            <Text style={styles.priceText}>R750 per course</Text>
+            <Text style={styles.priceText}>R1,500 per course</Text>
           </View>
         </View>
 
         {/* Course Benefits */}
         <View style={styles.benefitsSection}>
-          <Text style={styles.benefitsTitle}>Perfect For:</Text>
+          <Text style={styles.benefitsTitle}>What You'll Get:</Text>
           <View style={styles.benefitsList}>
             <View style={styles.benefitItem}>
-              <Text style={styles.benefitIcon}>⚡</Text>
-              <Text style={styles.benefitText}>Quick skill acquisition</Text>
+              <Text style={styles.benefitIcon}>📚</Text>
+              <Text style={styles.benefitText}>Comprehensive curriculum covering all aspects</Text>
             </View>
             <View style={styles.benefitItem}>
-              <Text style={styles.benefitIcon}>💼</Text>
-              <Text style={styles.benefitText}>Career enhancement</Text>
+              <Text style={styles.benefitIcon}>👨‍🏫</Text>
+              <Text style={styles.benefitText}>Expert instruction from qualified professionals</Text>
             </View>
             <View style={styles.benefitItem}>
               <Text style={styles.benefitIcon}>🎯</Text>
-              <Text style={styles.benefitText}>Focused learning objectives</Text>
+              <Text style={styles.benefitText}>Hands-on practical training</Text>
             </View>
             <View style={styles.benefitItem}>
-              <Text style={styles.benefitIcon}>⏰</Text>
-              <Text style={styles.benefitText}>Flexible scheduling</Text>
+              <Text style={styles.benefitIcon}>📜</Text>
+              <Text style={styles.benefitText}>Certificate upon completion</Text>
             </View>
           </View>
         </View>
@@ -85,12 +85,12 @@ export default function SixWeekScreen() {
           <Text style={styles.sectionTitle}>Available Courses</Text>
           
           <FlatList
-            data={sixWeekCourses}
+            data={sixMonthCourses}
             renderItem={renderCourseCard}
             numColumns={2}
             scrollEnabled={false}
             contentContainerStyle={styles.coursesGrid}
-            columnWrapperStyle={sixWeekCourses.length > 1 ? styles.courseRow : null}
+            columnWrapperStyle={sixMonthCourses.length > 1 ? styles.courseRow : null}
           />
         </View>
 
@@ -98,13 +98,13 @@ export default function SixWeekScreen() {
         <View style={styles.detailsSection}>
           <Text style={styles.detailsTitle}>Course Details</Text>
           
-          {sixWeekCourses.map((course, index) => (
+          {sixMonthCourses.map((course, index) => (
             <View key={course.id} style={styles.detailCard}>
               <Text style={styles.detailCardTitle}>{course.name}</Text>
               <Text style={styles.detailCardDescription}>{course.description}</Text>
               
               <View style={styles.contentList}>
-                <Text style={styles.contentTitle}>What You'll Learn:</Text>
+                <Text style={styles.contentTitle}>Course Content:</Text>
                 {course.content.map((item, itemIndex) => (
                   <Text key={itemIndex} style={styles.contentItem}>• {item}</Text>
                 ))}
@@ -118,48 +118,17 @@ export default function SixWeekScreen() {
           ))}
         </View>
 
-        {/* Comparison Section */}
-        <View style={styles.comparisonSection}>
-          <Text style={styles.comparisonTitle}>Why Choose 6-Week Courses?</Text>
-          
-          <View style={styles.comparisonCards}>
-            <View style={styles.comparisonCard}>
-              <Text style={styles.comparisonIcon}>🚀</Text>
-              <Text style={styles.comparisonCardTitle}>Quick Results</Text>
-              <Text style={styles.comparisonCardText}>
-                Start applying your new skills in just 6 weeks
-              </Text>
-            </View>
-            
-            <View style={styles.comparisonCard}>
-              <Text style={styles.comparisonIcon}>💰</Text>
-              <Text style={styles.comparisonCardTitle}>Affordable</Text>
-              <Text style={styles.comparisonCardText}>
-                Lower cost investment with immediate returns
-              </Text>
-            </View>
-            
-            <View style={styles.comparisonCard}>
-              <Text style={styles.comparisonIcon}>📈</Text>
-              <Text style={styles.comparisonCardTitle}>Career Boost</Text>
-              <Text style={styles.comparisonCardText}>
-                Perfect for adding complementary skills
-              </Text>
-            </View>
-          </View>
-        </View>
-
         {/* Call to Action */}
         <View style={styles.ctaSection}>
-          <Text style={styles.ctaTitle}>Start Learning Today!</Text>
+          <Text style={styles.ctaTitle}>Ready to Start Your Journey?</Text>
           <Text style={styles.ctaSubtitle}>
-            Transform your skills in just 6 weeks with our intensive programs
+            Invest in your future with our comprehensive 6-month programs
           </Text>
           <TouchableOpacity 
             style={styles.ctaButton}
             onPress={() => router.push('/(tabs)/contact')}
           >
-            <Text style={styles.ctaButtonText}>Get Started</Text>
+            <Text style={styles.ctaButtonText}>Contact Us</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -231,7 +200,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   priceTag: {
-    backgroundColor: Colors.orange,
+    backgroundColor: Colors.primary,
     paddingHorizontal: 20,
     paddingVertical: 8,
     borderRadius: 20,
@@ -350,46 +319,8 @@ const styles = StyleSheet.create({
   },
   detailDuration: {
     fontSize: 13,
-    color: Colors.orange,
+    color: Colors.primary,
     fontWeight: '500',
-  },
-  comparisonSection: {
-    paddingHorizontal: 20,
-    paddingVertical: 32,
-    backgroundColor: Colors.white,
-    marginTop: 8,
-  },
-  comparisonTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: Colors.textDark,
-    marginBottom: 24,
-    textAlign: 'center',
-  },
-  comparisonCards: {
-    gap: 16,
-  },
-  comparisonCard: {
-    backgroundColor: Colors.background,
-    padding: 20,
-    borderRadius: 12,
-    alignItems: 'center',
-  },
-  comparisonIcon: {
-    fontSize: 32,
-    marginBottom: 12,
-  },
-  comparisonCardTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: Colors.textDark,
-    marginBottom: 8,
-  },
-  comparisonCardText: {
-    fontSize: 14,
-    color: Colors.textLight,
-    textAlign: 'center',
-    lineHeight: 20,
   },
   ctaSection: {
     backgroundColor: Colors.darkBlueBg,

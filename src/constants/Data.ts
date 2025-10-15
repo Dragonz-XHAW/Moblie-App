@@ -21,7 +21,7 @@ export const coursesData: Course[] = [
     originalPrice: 2500,
     instructor: "Dr. Sarah Mitchell",
     description: "To provide first aid awareness and basic life support",
-    image: require('../assets/images/courses/First-Aid.png'),
+    image: require('../../assets/images/courses/First-Aid.png'),
     content: [
       "Wounds and bleeding",
       "Burns and fractures", 
@@ -39,7 +39,7 @@ export const coursesData: Course[] = [
     originalPrice: 2500,
     instructor: "Maria Santos",
     description: "To provide alterations and new garment tailoring services",
-    image: require('../assets/images/courses/Garment-Tailoring.jpg'),
+    image: require('../../assets/images/courses/Garment-Tailoring.jpg'),
     content: [
       "Types of stitches",
       "Threading a sewing machine",
@@ -57,7 +57,7 @@ export const coursesData: Course[] = [
     originalPrice: 2500,
     instructor: "David Green",
     description: "To provide landscaping services for new and established gardens",
-    image: require('../assets/images/courses/Landscaping.jpeg'),
+    image: require('../../assets/images/courses/Landscaping.jpeg'),
     content: [
       "Indigenous and exotic plants and trees",
       "Fixed structures (fountains, statues, benches, tables, built-in braai)",
@@ -75,7 +75,7 @@ export const coursesData: Course[] = [
     originalPrice: 2500,
     instructor: "Jennifer Wilson",
     description: "To provide skills to navigate basic life necessities",
-    image: require('../assets/images/courses/Life-Skills.png'),
+    image: require('../../assets/images/courses/Life-Skills.png'),
     content: [
       "Opening a bank account",
       "Basic labour law (know your rights)",
@@ -92,7 +92,7 @@ export const coursesData: Course[] = [
     originalPrice: 1250,
     instructor: "Lisa Thompson",
     description: "To provide basic child and baby care",
-    image: require('../assets/images/courses/Baby-Care.jpg'),
+    image: require('../../assets/images/courses/Baby-Care.jpg'),
     content: [
       "Birth to six-month old baby needs",
       "Seven-month to one year old needs",
@@ -109,7 +109,7 @@ export const coursesData: Course[] = [
     originalPrice: 1250,
     instructor: "Chef Michael Brown",
     description: "To prepare and cook nutritious family meals",
-    image: require('../assets/images/courses/Cooking.avif'),
+    image: require('../../assets/images/courses/Cooking.avif'),
     content: [
       "Nutritional requirements for a healthy body",
       "Types of protein, carbohydrates and vegetables",
@@ -127,7 +127,7 @@ export const coursesData: Course[] = [
     originalPrice: 1250,
     instructor: "Robert Johnson",
     description: "To provide basic knowledge of watering, pruning and planting in a domestic garden.",
-    image: require('../assets/images/courses/Garden-Maintenance.jpg'),
+    image: require('../../assets/images/courses/Garden-Maintenance.jpg'),
     content: [
       "Water restrictions and the watering requirements of indigenous and exotic plants",
       "Pruning and propagation of plants",

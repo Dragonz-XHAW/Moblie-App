@@ -9,9 +9,9 @@ import {
   FlatList,
 } from 'react-native';
 import { router } from 'expo-router';
-import { CourseCard } from '../../src/components/CourseCard';
-import { coursesData, Colors, Course } from '../../src/constants/Data';
-import { useCart } from '../../src/contexts/CartContext';
+import { CourseCard } from '../components/CourseCard';
+import { coursesData, Colors, Course } from '../constants/Data';
+import { useCart } from '../contexts/CartContext';
 
 export default function CoursesScreen() {
   const { state } = useCart();

@@ -11,9 +11,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { CourseCard } from '../../src/components/CourseCard';
-import { Colors, coursesData } from '../../src/constants/Data';
-import { useCart } from '../../src/contexts/CartContext';
+import { CourseCard } from '../components/CourseCard';
+import { Colors, coursesData } from '../constants/Data';
+import { useCart } from '../contexts/CartContext';
 
 const { width } = Dimensions.get('window');
 
