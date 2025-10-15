@@ -1,14 +1,14 @@
+import { router } from 'expo-router';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  TouchableOpacity,
   Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '../../src/constants/Data';
 import { useCart } from '../../src/contexts/CartContext';
 
@@ -140,7 +140,7 @@ export default function CartScreen() {
 
             {/* Discount Info */}
             {state.items.length === 1 && (
-              <View style={styles.discountInfo}>
+              <View style={styles.discountInfoCard}>
                 <Text style={styles.discountInfoTitle}>💡 Save More!</Text>
                 <Text style={styles.discountInfoText}>
                   Add more courses to unlock bulk discounts:
@@ -400,7 +400,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: Colors.primary,
   },
-  discountInfo: {
+  discountInfoCard: {
     backgroundColor: Colors.white,
     margin: 20,
     padding: 20,

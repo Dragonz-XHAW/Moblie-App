@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
-import { Course, Colors } from '../constants/Data';
+import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Colors, Course } from '../constants/Data';
 import { useCart } from '../contexts/CartContext';
 
 interface CourseCardProps {
@@ -24,7 +24,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onPress }) => {
   };
 
   const getCategoryColor = (category: string) => {
-    return category === 'six-month' ? Colors.badgePurple : Colors.orange;
+    return Colors.badgePurple;
   };
 
   return (

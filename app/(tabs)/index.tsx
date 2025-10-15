@@ -4,13 +4,13 @@ import {
   Dimensions,
   FlatList,
   Image,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { CourseCard } from '../../src/components/CourseCard';
 import { Colors, coursesData } from '../../src/constants/Data';
 import { useCart } from '../../src/contexts/CartContext';
