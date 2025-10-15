@@ -6,9 +6,9 @@
  * Expo Router handles the actual routing through the app/ directory.
  */
 
-import React from 'react';
 import { registerRootComponent } from 'expo';
 import { ExpoRoot } from 'expo-router';
+import React from 'react';
 
 // Import the app entry point
 const ctx = require.context('./app');
