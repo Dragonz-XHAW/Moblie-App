@@ -1,18 +1,18 @@
+import { router } from 'expo-router';
 import React from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  TouchableOpacity,
-  FlatList,
   Dimensions,
+  FlatList,
   Image,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { router } from 'expo-router';
 import { CourseCard } from '../../src/components/CourseCard';
-import { coursesData, Colors } from '../../src/constants/Data';
+import { Colors, coursesData } from '../../src/constants/Data';
 import { useCart } from '../../src/contexts/CartContext';
 
 const { width } = Dimensions.get('window');
