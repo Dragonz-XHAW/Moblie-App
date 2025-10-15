@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  TouchableOpacity,
-  TextInput,
   Alert,
   Linking,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '../../src/constants/Data';
 
 export default function ContactScreen() {
@@ -35,7 +35,7 @@ export default function ContactScreen() {
   };
 
   const handleCall = () => {
-    Linking.openURL('tel:+27123456789');
+    Linking.openURL('tel:+27618733220');
   };
 
   const handleEmail = () => {
@@ -43,7 +43,7 @@ export default function ContactScreen() {
   };
 
   const handleWhatsApp = () => {
-    Linking.openURL('https://wa.me/27123456789');
+    Linking.openURL('https://wa.me/27618733220');
   };
 
   return (
@@ -69,7 +69,7 @@ export default function ContactScreen() {
               <Text style={styles.contactIconText}>📞</Text>
             </View>
             <Text style={styles.contactCardTitle}>Call Us</Text>
-            <Text style={styles.contactCardValue}>+27 12 345 6789</Text>
+            <Text style={styles.contactCardValue}>+27 61 87 33220</Text>
             <Text style={styles.contactCardSubtext}>Mon-Fri 8AM-5PM</Text>
           </TouchableOpacity>
 
@@ -87,7 +87,7 @@ export default function ContactScreen() {
               <Text style={styles.contactIconText}>💬</Text>
             </View>
             <Text style={styles.contactCardTitle}>WhatsApp</Text>
-            <Text style={styles.contactCardValue}>+27 12 345 6789</Text>
+            <Text style={styles.contactCardValue}>+27 61 87 33220</Text>
             <Text style={styles.contactCardSubtext}>Quick responses</Text>
           </TouchableOpacity>
         </View>
